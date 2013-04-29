@@ -8,11 +8,6 @@
     Allow from all
   </Directory>
 
-  <Directory />
-    Options FollowSymLinks
-    AllowOverride None
-  </Directory>
-
   LogLevel info
   ErrorLog <%= node['apache']['log_dir'] %>/<%= @params[:name] %>-error.log
   CustomLog <%= node['apache']['log_dir'] %>/<%= @params[:name] %>-access.log combined

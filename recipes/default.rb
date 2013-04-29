@@ -20,12 +20,10 @@ service "cpan-mirror" do
   action :start
 end
 
-apache_site
-
 web_app "cpan_mirror" do
   docroot node.cpan_mirror.data_dir
-  hostname = node['cpan_mirror']['apache']['listen_hostname']
-  port = node['cpan_mirror']['apache']['listen_port']
+  hostname node['cpan_mirror']['apache']['listen_hostname']
+  port node['cpan_mirror']['apache']['listen_port']
 end
 
 log "Started mirroring CPAN; tail /var/log/upstart/cpan-mirror.log to monitor."
