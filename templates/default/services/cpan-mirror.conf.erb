@@ -1,0 +1,11 @@
+#!upstart
+description "Update CPAN mirror"
+
+respawn
+
+setuid <%= node.cpan_mirror.user %>
+
+env USER=<%= node.cpan_mirror.user %>
+env HOME=/home/<%= node.cpan_mirror.user %>
+
+exec rsync -av --delete cpan-rsync.perl.org::CPAN <%= node.cpan_mirror.data_dir %>
