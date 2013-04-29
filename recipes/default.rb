@@ -15,10 +15,10 @@ template "/etc/init/cpan-mirror.conf" do
   mode "0644"
 end
 
-# service "cpan-mirror" do
-#   provider Chef::Provider::Service::Upstart
-#   action :start
-# end
+service "cpan-mirror" do
+  provider Chef::Provider::Service::Upstart
+  action :start
+end
 
 apache_site
 
