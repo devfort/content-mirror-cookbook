@@ -2,5 +2,5 @@ language: ruby
 rvm:
   - 1.9.3
 script:
-  - bundle exec thor foodcritic:lint
-  - bundle exec thor version:bump auto
+  - bundle exec foodcritic .
+  # - bundle exec thor version:bump auto
