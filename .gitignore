@@ -13,3 +13,8 @@ Gemfile.lock
 bin/*
 .bundle/*
 
+VERSION
+.kitchen/
+.kitchen.local.yml
+
+results/

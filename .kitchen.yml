@@ -1,0 +1,20 @@
+---
+driver_plugin: vagrant
+
+platforms:
+- name: cpan-mirror-berkshelf
+  driver_config:
+    box: ubuntu-13.04
+    # box_url: http://example.box
+    download_results: /tmp/report
+    require_chef_omnibus: true
+
+suites:
+- name: default
+  run_list: ["recipe[minitest-handler]","recipe[cpan-mirror::default]"]
+  attributes:
+    minitest:
+      ci_reports: /tmp/report
+    cpan_mirror:
+      data_dir: /home/vagrant/cpan
+      user: vagrant
