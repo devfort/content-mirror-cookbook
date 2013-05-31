@@ -3,4 +3,4 @@ rvm:
   - 1.9.3
 script:
   - bundle exec foodcritic .
-  - bundle exec thor version
+  - bundle exec thor installed
