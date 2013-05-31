@@ -3,4 +3,5 @@ rvm:
   - 1.9.3
 script:
   - bundle exec foodcritic .
-  - bundle exec thor list
+  - bundle exec kitchen test
+  - bundle exec scmversion bump auto
