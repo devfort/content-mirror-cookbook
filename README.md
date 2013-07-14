@@ -14,7 +14,7 @@ Platform
 Attributes
 ==========
 
-Cookbook attributes are named under the `gem_mirror` namespace.
+Cookbook attributes are named under the `cpan_mirror` namespace.
 
 * `node['cpan_mirror']['user']` - user to host CPAN mirror as, defaults to `fort`
 * `node['cpan_mirror']['data_dir']` - directory to store CPAN mirror in, defaults to '/data/cpan'
