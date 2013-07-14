@@ -10,7 +10,6 @@ gem 'thor-scmversion'
 
 
 gem 'test-kitchen', :group => :integration, git: 'git://github.com/opscode/test-kitchen.git'
-gem 'kitchen-lxc', :group => :integration
 
-gem 'vagrant-wrapper', :group => :development
+gem 'vagrant', :group => :development, git: 'git://github.com/mitchellh/vagrant.git'
 gem 'kitchen-vagrant', :group => :development
