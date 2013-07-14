@@ -6,14 +6,19 @@ directory node['cpan_mirror']['data_dir'] do
   mode "0755"
 end
 
-template "/etc/init/cpan-mirror.conf" do
-  source "services/cpan-mirror.conf.erb" 
-  owner node['cpan_mirror']['user']
-  group node['cpan_mirror']['user']
-  mode "0644"
-end
+%w{
+  cpan-mirror
+  cpan-mirror-shim
+}.each{ |svc|
+  template "/etc/init/#{svc}.conf" do
+    source "services/#{svc}.conf.erb"
+    owner node['cpan_mirror']['user']
+    group node['cpan_mirror']['user']
+    mode "0644"
+  end
+}
 
-service "cpan-mirror" do
+service "cpan-mirror-shim" do
   provider Chef::Provider::Service::Upstart
   action :restart
 end

@@ -1,7 +1,10 @@
 #!upstart
 description "Update CPAN mirror"
 
-expect fork
+start on started cpan-mirror-shim
+stop on stopping cpan-mirror-shim
+
+task
 respawn
 
 setuid <%= node.cpan_mirror.user %>
