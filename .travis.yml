@@ -2,7 +2,5 @@ language: ruby
 rvm:
   - 1.9.3
 script:
-  - bundle exec foodcritic .
-  # TODO: Work out why kitchen test doesn't work
-  # - bundle exec kitchen test
-  - bundle exec scmversion bump auto
+  - bundle exec thor kitchen:all
+  # - bundle exec scmversion bump auto
