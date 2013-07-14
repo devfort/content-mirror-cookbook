@@ -4,4 +4,4 @@ rvm:
 
 before_install:
 - sudo apt-get update -qq
-- sudo apt-get install -qq virtualbox
+- sudo apt-get install -qq lxc
