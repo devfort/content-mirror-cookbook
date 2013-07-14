@@ -2,9 +2,8 @@
   DocumentRoot <%= @params[:docroot] %>
 
   <Directory <%= @params[:docroot] %>>
-    Options FollowSymLinks
+    Options Indexes FollowSymLinks
     AllowOverride FileInfo Options
-    Order allow,deny
     Allow from all
   </Directory>
 
