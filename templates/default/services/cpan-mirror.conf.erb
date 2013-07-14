@@ -1,6 +1,7 @@
 #!upstart
 description "Update CPAN mirror"
 
+expect fork
 respawn
 
 setuid <%= node.cpan_mirror.user %>
