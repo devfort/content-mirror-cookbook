@@ -3,8 +3,8 @@
 
 Vagrant.configure("2") do |config|
   config.vm.hostname = "cpan-mirror-berkshelf"
-  config.vm.box = "ubuntu-13.04"
-  config.vm.box_url = "https://opscode-vm-bento.s3.amazonaws.com/vagrant/opscode_ubuntu-13.04_provisionerless.box"
+  config.vm.box = "devfort-ubuntu-13.04-provisionerless-120gb"
+  config.vm.box_url = "http://devfort.s3.amazonaws.com/boxes/devfort-ubuntu-13.04-provisionerless-120gb-virtualbox.box"
 
   config.vm.network :forwarded_port, guest: 80, host: 8080
 
