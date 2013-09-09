@@ -33,3 +33,8 @@ Usage
 Include `cpan-mirror` and it will start replicating http://cpan.org. This will take a _very_ long time (probably the best part of a day), and require tens of gigabytes of storage. You have been warned.
 
 You can keep an eye on the mirroring progress by running `tail`ing `/var/log/upstart/cpan-mirror.log`.
+
+TODO
+====
+
+- `client` recipe
