@@ -4,6 +4,7 @@ directory node['cpan_mirror']['data_dir'] do
   owner node['cpan_mirror']['user']
   group node['cpan_mirror']['user']
   mode "0755"
+  recursive true
 end
 
 %w{
