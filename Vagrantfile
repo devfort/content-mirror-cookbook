@@ -15,7 +15,6 @@ Vagrant.configure("2") do |config|
       'apache' => {
         'default_site_enabled' => false
       },
-      :minitest => { ci_reports: "report.xml" },
       'cpan_mirror' => {
         'data_dir' => '/home/vagrant/cpan',
         'user' => 'vagrant'
@@ -23,7 +22,6 @@ Vagrant.configure("2") do |config|
     }
 
     chef.run_list = [
-      "recipe[minitest-handler]",
       "recipe[cpan-mirror::default]",
     ]
   end
