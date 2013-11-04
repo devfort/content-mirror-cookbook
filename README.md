@@ -18,7 +18,6 @@ Cookbook attributes are named under the `cpan_mirror` namespace.
 
 * `node['cpan_mirror']['user']` - user to host CPAN mirror as, defaults to `fort`
 * `node['cpan_mirror']['data_dir']` - directory to store CPAN mirror in, defaults to '/data/cpan'
-* `node['cpan_mirror']['remote_cpan']` - URL of CPAN mirror to replicate from, defaults to 'http://www.cpan.org/'
 * `node['cpan_mirror']['apache']['listen_hostname']` - Hostname to listen on for CPAN Apache virtualhost, defaults to '*'
 * `node['cpan_mirror']['apache']['listen_port']` - Port to listen on for CPAN Apache virtualhost, defaults to '80'
 
