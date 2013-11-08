@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.hostname = "cpan-mirror-berkshelf"
+  config.vm.hostname = "content-mirror-berkshelf"
   config.vm.box = "devfort-ubuntu-13.04-provisionerless-120gb"
   config.vm.box_url = "http://devfort.s3.amazonaws.com/boxes/devfort-ubuntu-13.04-provisionerless-120gb-virtualbox.box"
 
@@ -15,14 +15,14 @@ Vagrant.configure("2") do |config|
       'apache' => {
         'default_site_enabled' => false
       },
-      'cpan_mirror' => {
-        'data_dir' => '/home/vagrant/cpan',
+      'content_mirror' => {
+        'data_dir' => '/home/vagrant/content',
         'user' => 'vagrant'
       }
     }
 
     chef.run_list = [
-      "recipe[cpan-mirror::default]",
+      "recipe[content-mirror::default]",
     ]
   end
 end
