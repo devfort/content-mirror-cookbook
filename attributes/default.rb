@@ -4,7 +4,7 @@ default['content_mirror']['apache']['hostname_template'] = '%{name}.fort'
 default['content_mirror']['apache']['listen_port'] = '80'
 
 default['content_mirror']['commands'] = {
-  rsync: => 'rsync -aP --delete %{args} %{remote} %{target}',
+  rsync: 'rsync -aP --delete %{args} %{remote} %{target}',
   wget: 'wget -m -k -p -nH -np %{args} %{remote}',
 }
 
