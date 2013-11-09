@@ -12,7 +12,7 @@ default['content_mirror']['content'] = {
   'rfcs' => {
     method: 'rsync',
     remote: 'ftp.rfc-editor.org::rfcs-text-only',
-  }
+  },
   'I-Ds' => {
     method: 'rsync',
     remote: 'ftp.rfc-editor.org::ids-text-only',
