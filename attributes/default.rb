@@ -22,16 +22,7 @@ default['content_mirror']['content'] = {
     remote: 'ftp.funet.fi::ftp/pub/mirrors/ftp.imdb.com/pub/',
     args: '--exclude diffs',
   },
-  'xemacs' => {
-    method: 'rsync',
-    remote: 'rsync.xemacs.org::xemacsftp',
-    args: '--exclude Attic',
-  },
 
-  'django-book' => {
-    method: 'wget',
-    remote: 'http://www.djangobook.com/en/2.0/',
-  },
   'w3' => {
     method: 'wget',
     remote: 'http://www.w3.org/TR/',
