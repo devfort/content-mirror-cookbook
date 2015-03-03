@@ -25,6 +25,7 @@ default['content_mirror']['content'] = {
 
   'w3' => {
     method: 'wget',
+    args: '-l 2',
     remote: 'http://www.w3.org/TR/',
   },
 }
